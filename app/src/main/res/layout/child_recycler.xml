@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/child_textView"
+        style="@style/Base.TextAppearance.AppCompat.Subhead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:text="Hello Child"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/expandable_layout_child"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/child_textView"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ListView
+            android:id="@+id/rv_baby"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:orientation="horizontal"
+            android:padding="20dp" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
